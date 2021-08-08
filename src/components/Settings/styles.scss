@@ -1,0 +1,24 @@
+.settings {
+	text-align: left;
+	margin: auto;
+	width: 25%;
+}
+
+.settings h2 {
+	text-align: center;
+}
+
+.change-password {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	justify-content: start;
+}
+
+.settings-section {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

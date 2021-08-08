@@ -1,0 +1,58 @@
+.landing {
+	display: flex;
+	width: 80%;
+	margin: 30px auto;
+	justify-content: space-around;
+}
+
+.landing-paste-url {
+	width: 70%;
+	margin: auto;
+}
+
+.landing-become-referral {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	margin: auto;
+	justify-content: center;
+}
+
+.landing-divisor {
+	width: 1px;
+	min-height: 95%;
+	background-color: gray;
+	margin: 25px 60px;
+}
+
+.landing-box-container {
+	width: 100%;
+	display: flex;
+	margin: auto;
+	justify-content: space-between;
+}
+
+.landing-referral-button {
+	width: 80%;
+	display: flex;
+	margin: auto 20px;
+	justify-content: center;
+	align-items: center;
+	border-style: solid;
+	border-width: 1px;
+	border-color: aquamarine;
+	border-radius: 4px;
+}
+
+.landing-link-dialog {
+	padding: 25px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: auto;
+	background-color: white;
+	border-width: 1px;
+	border-radius: 3px;
+	border-color: gray;
+}

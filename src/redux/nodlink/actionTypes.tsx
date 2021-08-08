@@ -1,0 +1,2 @@
+export const ADD_NODLINK = "ADD_NODLINK";
+export const REMOVE_NODLINK = "REMOVE_NODLINK";
