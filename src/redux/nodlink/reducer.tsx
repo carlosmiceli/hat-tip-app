@@ -1,26 +1,36 @@
-// import * as actionTypes from "./actionTypes";
-// import { NodLinksState } from "../../interfaces/nodlink-types";
+import {
+	ADD_NODLINK,
+	GET_NODLINKS_BY_USER,
+	REMOVE_NODLINK,
+} from "./actionTypes";
+import { NodLinksList } from "../../interfaces/nodlink-types";
 
-// const initialState: NodLinksState = {
-// 	links: [
-// 		{
-// 			id: 1,
-// 			nodId: "alsdjnalsdkgj",
-// 			originalUrl:
-// 				"https://www.freecodecamp.org/news/how-to-use-redux-in-your-react-typescript-app/#setting-up",
-// 		},
-// 		{
-// 			id: 2,
-// 			nodId: "lfdj vlkfbs",
-// 			originalUrl:
-// 				"https://www.freecodecamp.org/news/how-to-use-redux-in-your-react-typescript-app/#setting-up",
-// 		},
-// 	],
-// };
+const dashboard: NodLinksList = [];
 
-import { Fragment } from "react";
+const initialState = {
+	dashboard,
+};
 
-// const initialState = {};
-
-// export default function nodlinkReducer(state = initialState, action: any) {}
-export {};
+export default function nodlinksReducer(state = initialState, action: any) {
+	switch (action.type) {
+		case ADD_NODLINK:
+			return {
+				...initialState,
+				dashboard: [...initialState.dashboard, action.payload],
+			};
+		case GET_NODLINKS_BY_USER:
+			return {
+				...initialState,
+				dashboard: action.payload,
+			};
+		case REMOVE_NODLINK:
+			return {
+				...initialState,
+				dashboard: initialState.dashboard.filter(
+					(nodlink) => nodlink !== action.payload
+				),
+			};
+		default:
+			return state;
+	}
+}

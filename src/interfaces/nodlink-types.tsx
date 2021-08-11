@@ -1,16 +1,15 @@
 export type NodLink = {
-    id: number
-    originalUrl: string
-    nodId: string
-  }
-  
-export type NodLinksState = {
-    links: NodLink[]
-  }
-  
-export type NodLinkAction = {
-    type: string
-    link: NodLink
-  }
-  
-export type DispatchType = (args: NodLinkAction) => NodLinkAction
+	id: number;
+	original: string;
+	nod: string;
+	reward: number;
+	description: string;
+	tipper: {
+		id: number;
+		name: string;
+		lastName: string;
+		profile: string;
+	};
+};
+
+export type NodLinksList = NodLink[];

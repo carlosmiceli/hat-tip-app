@@ -1,2 +1,3 @@
 export const ADD_NODLINK = "ADD_NODLINK";
+export const GET_NODLINKS_BY_USER = "GET_NODLINKS_BY_USER";
 export const REMOVE_NODLINK = "REMOVE_NODLINK";
