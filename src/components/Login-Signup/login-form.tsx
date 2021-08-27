@@ -1,7 +1,6 @@
 import { useForm } from "react-hook-form";
 import { loginUser } from "../../redux/user/actionCreators";
 import { useDispatch } from "react-redux";
-
 import "./styles.scss";
 
 export default function Login() {

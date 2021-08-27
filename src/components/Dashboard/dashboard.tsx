@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import "./styles.scss";
 import Dialog from "@material-ui/core/Dialog";
-import { RootState } from "../../redux/store";
+// import { RootState } from "../../redux/store";
 import { makeStyles } from "@material-ui/core/styles";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -13,9 +13,9 @@ import TableRow from "@material-ui/core/TableRow";
 import { NodLink } from "../../interfaces/nodlink-types";
 
 export default function Dashboard() {
-	const nodlinksList = useSelector(
-		(state: RootState) => state.nodlinks.dashboard
-	);
+	// const nodlinksList = useSelector(
+	// 	(state: RootState) => state.nodlinks.dashboard
+	// );
 	const [metaHtmlDialog, setmetaHtmlDialog] = useState(true);
 
 	let scriptText =
