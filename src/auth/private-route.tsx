@@ -1,4 +1,5 @@
 import { Route, Redirect, RouteProps } from "react-router-dom";
+import LoginPage from "../components/Login-Signup/login-page";
 
 interface PrivateRouteProps extends RouteProps {
 	component: any;
@@ -13,14 +14,24 @@ const PrivateRoute = (props: PrivateRouteProps) => {
 			{...rest}
 			render={(routeProps) =>
 				isLoggedIn ? (
-					<Component {...routeProps} />
+					routeProps.location.pathname !== "/login" ? (
+						<Component {...routeProps} />
+					) : (
+						<Redirect
+							to={{
+								pathname: "/dashboard",
+								state: { from: routeProps.location },
+							}}
+						/>
+					)
 				) : (
-					<Redirect
-						to={{
-							pathname: "/login",
-							state: { from: routeProps.location },
-						}}
-					/>
+					<LoginPage />
+					// <Redirect
+					// 	to={{
+					// 		pathname: "/login",
+					// 		state: { from: routeProps.location },
+					// 	}}
+					// />
 				)
 			}
 		/>
